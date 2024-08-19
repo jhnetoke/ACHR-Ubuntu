@@ -66,7 +66,7 @@ INTERFACE_IP=$(ip addr show $INTERFACE | grep global | cut -d' ' -f 6 | head -n 
 INTERFACE_GATEWAY=$(ip route show | grep default | awk '{print $3}')
 
 {
-    wget -qO routeros.zip https://github.com/elseif/MikroTikPatch/releases/download/7.15.3/chr-7.15.3.img.zip && \
+    wget https://github.com/elseif/MikroTikPatch/releases/download/7.15.3/chr-7.15.3.img.zip && \
     unzip routeros.zip > /dev/null 2>&1 && \
     rm -rf routeros.zip
 } & show_loading
